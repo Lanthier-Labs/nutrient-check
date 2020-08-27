@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <!-- Register service worker if supported. -->
+  <!--
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
+  -->
+  
+  <!-- Load polyfills -->
+  <script 
+    src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+    defer>
+  </script> 
+
+  <!-- Load components via WebComponents.waitFor -->
+  <script type="module">
+    window.WebComponents = window.WebComponents || { 
+      waitFor(cb){ addEventListener('WebComponentsReady', cb) }
+    }
+    WebComponents.waitFor(async () => {
+      import('./src/nutrient-check.js');
+    });
+
+  </script>
+  
+  <!-- Change stuff here for your app -->
+  <meta name="description" content="card">
+  <meta name="theme-color" content="#802eb0">
+  <title>Nutrient Check Label</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="shortcut icon" href="/manifest/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<div >
+  <nutrient-check fat="2" calories="90" protein="3" carbohydrates="4" fiber="2" servingSize="1/2 cup" polyunsaturatedfat="3">
+    <p>Titlde</p>
+  </nutrient-check>
+</div>
+</body>
+</html>
+<style>
+</style>

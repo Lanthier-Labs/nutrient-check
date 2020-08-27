@@ -1,0 +1,28 @@
+{
+  "name": "@lanthierlabs/nutrient-check",
+  "version": "0.0.1",
+  "description": "Modified nutrition label to provide more useful information",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lanthier-Labs/nutrient-check.git"
+  },
+  "main": "nutrient-check.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lanthier Labs LLC",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "latest",
+    "lit-element": "latest"
+  },
+  "bugs": {
+    "url": "https://github.com/Lanthier-Labs/nutrient-check/issues"
+  },
+  "homepage": "https://github.com/Lanthier-Labs/nutrient-check#readme",
+  "devDependencies": {},
+  "keywords": [
+    "nutrition",
+    "label"
+  ]
+}
